@@ -12,7 +12,7 @@ jobs:
             sudo apt-get update
             sudo apt install python3-pip
             sudo pip3 install awsebcli --upgrade
-      - run: cd ./ && npm install && npm run build
+      - run: cd ./ && npm install && CI=false npm run build
       - persist_to_workspace:
           root: .
           paths:
